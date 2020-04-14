@@ -9,6 +9,9 @@ import VModal from 'vue-js-modal'
  
 import beritaDetail from '@/js/components/berita/detail';
 import Embed from 'v-video-embed'
+import Vue2TouchEvents from 'vue2-touch-events'
+ 
+Vue.use(Vue2TouchEvents)
 
 // global register
 Vue.use(Embed);
