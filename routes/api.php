@@ -13,6 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::POST("/berita", "BeritaControl@index");
+Route::GET("/berita", "BeritaControl@index");
 Route::POST("/videos", "VideosControl@index");
 
