@@ -32,7 +32,14 @@
     <link rel="stylesheet" href="{{url('public/imagine/css/aos.css')}}">
 
     <link rel="stylesheet" href="{{url('public/imagine/css/style.css')}}">
-    
+    <style>
+      @media screen and (max-width: 1024px) {
+        html, body {
+            z-index: 0 !important;
+            overflow: scroll !important;
+        }
+    }
+    </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="site-wrap"  id="home-section">

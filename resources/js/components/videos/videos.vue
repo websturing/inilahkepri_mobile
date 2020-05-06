@@ -5,15 +5,13 @@
     <carousel :perPage="3" :paginationEnabled="false">
         <slide v-for="(v,index) in videosData" :key="index">
             <div class="wrapvideo">
-            <img :src="v.thumbnails" alt="Placeholder image" class="img-fluid" @click="showModal(index)" v-touch:tap="showModal(index)">
-            <div class="judulVideo" @click="showModal(index)" v-touch:tap="showModal(index)">{{v.title}}</div>
+            <img :src="v.thumbnails" alt="Placeholder image" class="img-fluid" @click="showModal(index)">
+            <div class="judulVideo" @click="showModal(index)">{{v.title}}</div>
             <div class="is-kategori">{{moment(v.publishedAt).startOf('day').fromNow()}}</div>
             </div>
         </slide>
     </carousel>
     
-    
-
     <div  v-for="(v,index) in videosData" :key="index" class="ImageNews" v-if="detailShow">
             <el-card shadow="never" :body-style="{ padding: '10px', height: '100px' }">
                 <el-row :gutter="5">
@@ -93,9 +91,6 @@ export default {
         tutupmodal(){
             $("#exampleModal").modal("hide")
             this.playing.url = null
-            this.playing.title = null
-            this.playing.publishedAt = null
-            this.playing.description = null
           }
        
     },
