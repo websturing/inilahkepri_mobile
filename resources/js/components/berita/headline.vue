@@ -51,7 +51,7 @@ export default {
             },
             url : {
                 api : urlBase.urlAxios,
-                images : urlBase.urlWeb+'/storage/Artikel_Thumbnail/',
+                images : urlBase.urlGambar+'/resources/Artikel_Thumbnail/',
             },
         }
     },

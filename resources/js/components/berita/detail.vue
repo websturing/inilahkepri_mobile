@@ -33,7 +33,7 @@ export default {
             detail :[],
             url : {
                 api : urlBase.urlAxios,
-                image : urlBase.urlGambar+'/storage/Artikel_Thumbnail/',
+                image : urlBase.urlGambar+'/resources/Artikel_Thumbnail/',
             },
         }
     },

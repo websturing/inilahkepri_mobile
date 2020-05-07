@@ -1,6 +1,5 @@
 <template>
         <div>
-
         
         <div  v-for="(b,index) in berita.data" :key="index" class="ImageNews">
             <el-card shadow="never" :body-style="{ padding: '10px', height: '100px' }">
@@ -11,7 +10,12 @@
                     <el-col :span="17">
                         <div class="is-Subjudul" @click="Todetail(index)">{{b.judul_highlight}}</div>
                         <div class="judulBerita" @click="Todetail(index)">{{b.judul}}</div>
-                        <div class="is-kategori" @click="Todetail(index)">{{b.getkategori.nama_kategori}} -  {{moment(b.tgl_publish).startOf('day').fromNow()}}</div>
+                        <div v-if="b.getkategori == null">
+                            {{moment(b.tgl_publish).startOf('day').fromNow()}}
+                        </div>
+                        <div v-else>
+                            <div class="is-kategori" @click="Todetail(index)">{{b.getkategori.nama_kategori}} -  {{moment(b.tgl_publish).startOf('day').fromNow()}}</div>
+                        </div>
                     </el-col>
                 </el-row>
             </el-card>
@@ -42,13 +46,9 @@ export default {
                 take : 15,
                 type : 'berita'
             },
-            infiniteData :{
-                scroll : 0,
-                skip : this.take,
-            },
             url : {
                 api : urlBase.urlAxios,
-                image : urlBase.urlGambar+'/storage/Artikel_Thumbnail/',
+                image : urlBase.urlGambar+'/resources/Artikel_Thumbnail/',
             },
         }
     },
@@ -84,7 +84,6 @@ export default {
                      else{
                          $state.complete();
                      }
-                        
                     
                 });
                 

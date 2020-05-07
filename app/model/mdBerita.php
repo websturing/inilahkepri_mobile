@@ -3,13 +3,13 @@
 namespace App\model;
 
 use Illuminate\Database\Eloquent\Model;
-use App\model\mdkategori;
+use App\model\mdKategori;
 use Illuminate\Support\Str;
 
 class mdBerita extends Model
 {
     protected $table        = "berita";
-    protected $primaryKey   = "berita_id";
+    protected $primaryKey   = "id_berita";
 
     protected $appends = [
         'Folder',
