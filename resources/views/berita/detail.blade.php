@@ -11,6 +11,5 @@
 
 @section('content')
 
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5866255bf1b2733b"></script>
     <berita-Detail :id="{{ $id }}"></berita-Detail>
 @endsection

@@ -40,6 +40,9 @@
         }
     }
     </style>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5866255bf1b2733b"></script>
+
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="site-wrap"  id="home-section">
@@ -135,7 +138,6 @@
       </div>
     </div> <!-- .site-wrap -->
 
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5866255bf1b2733b"></script>
   <script src="{{url('public/imagine/js/jquery-3.3.1.min.js')}}"></script>
   <script src="{{url('public/imagine/js/jquery-ui.js')}}"></script>
   <script src="{{url('public/imagine/js/popper.min.js')}}"></script>
