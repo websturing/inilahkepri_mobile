@@ -13,11 +13,16 @@ class mdBerita extends Model
 
     protected $appends = [
         'Folder',
-        'description'
+        'description',
+        'seo',
     ];
 
     function getFolderAttribute() {
         $crypt = date("Ymd", strtotime($this->tgl_publish));
+        return $crypt;
+    }
+    function getseoAttribute() {
+        $crypt = str_replace(" ","-",$this->judul);
         return $crypt;
     }
     function getdescriptionAttribute() {

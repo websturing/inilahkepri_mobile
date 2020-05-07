@@ -11,7 +11,7 @@
                         <div class="is-Subjudul" @click="Todetail(index)">{{b.judul_highlight}}</div>
                         <div class="judulBerita" @click="Todetail(index)">{{b.judul}}</div>
                         <div v-if="b.getkategori == null">
-                            {{moment(b.tgl_publish).startOf('day').fromNow()}}
+                            <div class="is-kategori">{{moment(b.tgl_publish).startOf('day').fromNow()}}</div>
                         </div>
                         <div v-else>
                             <div class="is-kategori" @click="Todetail(index)">{{b.getkategori.nama_kategori}} -  {{moment(b.tgl_publish).startOf('day').fromNow()}}</div>
@@ -102,7 +102,7 @@ export default {
         },
         Todetail(i){
             // this.$router.push({ name: 'detail', params: { id: this.berita.data[i].id_berita, judul: this.berita.data[i].judul } });
-            window.location.href = urlBase.urlWeb+'/berita/'+this.berita.data[i].id_berita+'/'+this.berita.data[i].judul
+            window.location.href = urlBase.urlWeb+'/berita/'+this.berita.data[i].id_berita+'/'+this.berita.data[i].seo
         },
     },
     props:["skip","take","type","infinite"],

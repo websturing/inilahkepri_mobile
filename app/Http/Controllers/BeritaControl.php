@@ -84,7 +84,9 @@ class BeritaControl extends Controller
         $urlLink = url()->full();
         $folder = date("Ymd", strtotime($berita[0]->tgl_publish));
         $description = Str::words($berita[0]->isi_berita, '30');
-        $gambarLink = url('/storage/Artikel_Thumbnail/'.$folder.'/'.$berita[0]->gambar);
+        // $gambarLink = url('/storage/Artikel_Thumbnail/'.$folder.'/'.$berita[0]->gambar);
+        $gambarLink = 'http://inilahkepri.id/resources/Artikel_Thumbnail/'.$folder.'/'.$berita[0]->gambar;
+
 
         return view('berita.detail', compact('id','berita','urlLink','description','gambarLink'));
     }

@@ -135,6 +135,7 @@
       </div>
     </div> <!-- .site-wrap -->
 
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5866255bf1b2733b"></script>
   <script src="<?php echo e(url('public/imagine/js/jquery-3.3.1.min.js')); ?>"></script>
   <script src="<?php echo e(url('public/imagine/js/jquery-ui.js')); ?>"></script>
   <script src="<?php echo e(url('public/imagine/js/popper.min.js')); ?>"></script>
