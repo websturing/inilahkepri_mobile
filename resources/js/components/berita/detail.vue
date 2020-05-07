@@ -5,14 +5,12 @@
             <h5>{{detail.judul}}</h5>
 
             <div class="share-sosial">
-                
-                        <div class="addthis_inline_share_toolbox"></div>
               <el-row :gutter="5">
                     <el-col :span="18">
                         <div class="is-kategori">{{moment(tglPublish).format('LLLL')}}</div>
                     </el-col>
                     <el-col :span="8">
-            
+                        <div class="addthis_inline_share_toolbox"></div>
                     </el-col>
               </el-row>
             </div>
