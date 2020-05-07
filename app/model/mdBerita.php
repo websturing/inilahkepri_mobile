@@ -22,7 +22,7 @@ class mdBerita extends Model
         return $crypt;
     }
     function getseoAttribute() {
-        $crypt = str_replace(" ","-",$this->judul);
+        $crypt = str_slug($this->judul,"-");
         return $crypt;
     }
     function getdescriptionAttribute() {
