@@ -6,10 +6,10 @@
 
             <div class="share-sosial">
               <el-row :gutter="5">
-                    <el-col :span="18">
+                    <el-col :span="24">
                         <div class="is-kategori">{{moment(tglPublish).format('LLLL')}}</div>
                     </el-col>
-                    <el-col :span="8">
+                    <el-col :span="24">
                         <div class="addthis_inline_share_toolbox"></div>
                     </el-col>
               </el-row>
