@@ -63,6 +63,9 @@ export default {
     created(){
         this.getBerita();       
     },
+    mounted(){
+        this.$parent.$data.activeLoader = false;
+    },
     methods:{
         moment(arg) {
              moment.locale('id');
