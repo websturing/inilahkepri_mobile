@@ -1,8 +1,10 @@
 <template>
     <div>
 
+
         <headline></headline>
         <berita :skip='0' :type="'berita'" :take="15" :infinite="true"/>
+        
     </div>
 </template>
 
@@ -22,6 +24,7 @@ export default {
         }
     },
     mounted() {
+        this.$parent.$data.activeLoader = false;
         console.log('Component mounted.')
     },
     methods:{

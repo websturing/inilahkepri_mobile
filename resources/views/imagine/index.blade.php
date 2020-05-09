@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{url('public/imagine/css/aos.css')}}">
 
     <link rel="stylesheet" href="{{url('public/imagine/css/style.css')}}">
+    <link rel="stylesheet" href="{{url('public/css/skeleton.css')}}">
     <style>
       @media screen and (max-width: 1024px) {
         html, body {
@@ -103,8 +104,30 @@
         </div>
         
       </header>
-      
       <div id="app">
+        
+      <div style="padding:150px 15px 0px 15px" v-if="activeLoader">
+
+        @for($i=0; $i < 6; $i++)
+          <div class="lightui1" style="margin-bottom:10px">
+            <div class="lightui1-shimmer">
+                <div class="_2iwr"></div>
+                <div class="_2iws"></div>
+                <div class="_2iwt"></div>
+                <div class="_2iwu"></div>
+                <div class="_2iwv"></div>
+                <div class="_2iww"></div>
+                <div class="_2iwx"></div>
+                <div class="_2iwy"></div>
+                <div class="_2iwz"></div>
+                <div class="_2iw-"></div>
+                <div class="_2iw_"></div>
+                <div class="_2ix0"></div>
+            </div>
+          </div>
+        @endfor
+        
+      </div>
         <router-view :key="$route.fullPath"></router-view>
         @yield('content')
       </div>
@@ -116,19 +139,16 @@
             <div class="col-12">
               <p class="mb-0">
                 <a href="#" class="p-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="p-3"><span class="icon-twitter"></span></a>
                 <a href="#" class="p-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="p-3"><span class="icon-linkedin"></span></a>
-                <a href="#" class="p-3"><span class="icon-pinterest"></span></a>
+                <a href="https://colorlib.com" target="_blank" class="p-3">Coloriib</a>
               </p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <p class="mb-0">
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+      
               </p>
             </div>
           </div>

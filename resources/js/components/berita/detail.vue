@@ -18,7 +18,10 @@
             <img :src="url.image+'/'+detail.Folder+'/'+detail.gambar" alt="Placeholder image" class="img-fluid">
             <p class="ketGambar">{{detail.ket_gambar}}</p>
             <el-divider></el-divider>
-            <p v-html="detail.isi_berita"></p>
+            {{hIsiBerita}}
+            <p v-html="detail.isi_berita" ref="isiBerita" style="position:relative;"></p>
+             <h1 :style="{'margin-top': hIsiBerita}" class="bacaJuga">Afriandi</h1>
+             <div style="margin-bottom : 761.5px"></div>
           
     </div>
       <berita :take="5" :skip="0" :type="'berita'" :infinite="true"/>
@@ -45,19 +48,20 @@ export default {
                 api : urlBase.urlAxios,
                 image : urlBase.urlGambar+'/resources/Artikel_Thumbnail/',
             },
+            hIsiBerita : null
         }
     },
     props:['id'],
     computed:{
         tglPublish: function () {
             return this.detail.tgl_publish+" "+this.detail.jam
+        },
+        heifh: function(){
+           return this.heightOfIsi()
         }
     },
     created(){
         this.getBerita();       
-    },
-    mounted(){
-        this.getBerita();
     },
     methods:{
         moment(arg) {
@@ -70,9 +74,19 @@ export default {
                 id : this.id
             })
                 .then(r => {
-                    this.detail = r.data[0]
+                    this.detail = r.data[0],
+                    this.heightOfIsi()
                 });
         },
+        heightOfIsi(){
+            this.$nextTick(() => {
+
+                 let h = "-"+this.$refs.isiBerita.clientHeight * 0.5+'px'
+                 this.hIsiBerita = h
+
+            });
+           
+        }
     },
     components:{
         berita,
@@ -103,5 +117,10 @@ p{
 }
 .share-sosial{
     margin: 10px 0px 15px 0px;
+}
+
+.bacaJuga{
+    display: absolute;
+    background: red;
 }
 </style>

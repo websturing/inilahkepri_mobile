@@ -25,6 +25,9 @@ Vue.use(VModal)
 const app = new Vue({
     el: '#app',
     router: Routes,
+    data: {
+        activeLoader: true,
+    },
     components:{
         beritaDetail                                                                                                                                                                                                         
     }
