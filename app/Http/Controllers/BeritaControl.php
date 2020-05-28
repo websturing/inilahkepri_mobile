@@ -22,6 +22,9 @@ class BeritaControl extends Controller
         else if($type == 'id'){  
             return self::getberitaById($r);
         }
+        else if($type == 'AddViewer'){
+            return self::AddViewer($r);
+        }
 
     }
 
@@ -89,5 +92,17 @@ class BeritaControl extends Controller
 
 
         return view('berita.detail', compact('id','berita','urlLink','description','gambarLink'));
+    }
+    
+    function AddViewer(Request $r){
+        $id = $r->get("id");
+        
+        $berita = mdBerita::where("id_berita", $id)->get();  
+//        
+        $dibaca = $berita[0]->dibaca + 1;
+//        
+        $a = array("dibaca" => $dibaca);
+//        
+        return mdBerita::where("id_berita", $id)->update($a);  
     }
 }

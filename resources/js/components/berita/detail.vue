@@ -61,6 +61,7 @@
         },
         mounted() {
             this.$parent.$data.activeLoader = false;
+            this.AddViewer()
         },
         methods: {
             moment(arg) {
@@ -75,6 +76,15 @@
                     .then(r => {
                         this.detail = r.data[0],
                             this.heightOfIsi()
+                    });
+            },
+            AddViewer() {
+                axios.post(this.url.api + '/berita', {
+                        type: "AddViewer",
+                        id: this.id
+                    })
+                    .then(r => {
+                        console.log("viewer")
                     });
             },
             heightOfIsi() {
