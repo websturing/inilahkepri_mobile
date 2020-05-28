@@ -8,14 +8,14 @@
 //const urlWeb = "http://tukangketik.my.id/inilahkepri_mobile";
 //const urlGambar = "http://inilahkepri.id";
 
-const urlAxios = "http://m.inilahkepri.id/api";
+const urlAxios = "https://m.inilahkepri.id/api";
 const urlBase = "";
-const urlWeb = "http://m.inilahkepri.id";
-const urlGambar = "http://inilahkepri.id";
-const urlThumbnailBerita = "http://inilahkepri.id/resources/Artikel_Thumbnail";
-const iklan = "http://inilahkepri.id/public/iklan";
-const album = "http://inilahkepri.id/resources/album";
-const gallery = "http://inilahkepri.id/resources/gallery";
+const urlWeb = "https://m.inilahkepri.id";
+const urlGambar = "https://inilahkepri.id";
+const urlThumbnailBerita = "https://inilahkepri.id/resources/Artikel_Thumbnail";
+const iklan = "https://inilahkepri.id/public/iklan";
+const album = "https://inilahkepri.id/resources/album";
+const gallery = "https://inilahkepri.id/resources/gallery";
 
 export default {
     urlAxios: urlAxios,
