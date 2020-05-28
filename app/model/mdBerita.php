@@ -11,7 +11,7 @@ class mdBerita extends Model
     protected $table        = "berita";
     protected $primaryKey   = "id_berita";
 
-    public $timestamp = false;
+   public $timestamps = false;
     
     protected $appends = [
         'Folder',
