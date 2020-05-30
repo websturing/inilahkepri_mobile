@@ -1,65 +1,64 @@
-html, body {
+html,
+body {
     background-color: #F8F9FD;
 }
-.contentWrap{
+
+.contentWrap {
     padding: 5px !important;
 }
 
-.b-rounded{
+.b-rounded {
     border-radius: 8px !important;
 }
-.ketGambar{
+
+.ketGambar {
     font-size: 7px !important;
     line-height: -100px !important;
 }
 
-.ketisi{
+.ketisi {
     padding: 10px !important;
     font-size: 2px !important;
 }
 
-.b-judul{
-   line-height: 0px !important; 
+.b-judul {
+    line-height: 0px !important;
 }
 
-.ImageNews img{
-    background-color: black;
-    width: 96px !important;
-    height: 80px !important;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.SlideUtama{
+
+.SlideUtama {
     padding: 5px;
     border-radius: 30px;
 }
 
-.SlideUtama img{
+.SlideUtama img {
     border-radius: 5px;
 }
-.card-berita{
-    padding:10px;
+
+.card-berita {
+    padding: 10px;
 }
-.is-judul{
+
+.is-judul {
     font-size: 11px !important;
     font-weight: 550;
 }
 
-.is-Subjudul{
+.is-Subjudul {
     font-size: 9px !important;
     color: #1E5DA9 !important;
     font-weight: bolder;
 }
 
-.is-kategori{
+.is-kategori {
     font-size: 9px !important;
     color: #798087;
 }
 
-.LoopBerita{
+.LoopBerita {
     background-color: #F8F9FD !important;
 }
 
-.kategoriNews img{
+.kategoriNews img {
     border-radius: 5px;
 }

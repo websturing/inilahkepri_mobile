@@ -2,6 +2,9 @@
     <div class="site-section" style="overflow: hidden;">
         <div class="container detailImage">
             <br /><br /><br />
+
+            <img :src="url.iklan+'/20200422.jpeg'" class="img-responsive">
+
             <h5>{{detail.judul}}</h5>
 
             <div class="share-sosial">
@@ -18,7 +21,7 @@
             <img :src="url.image+'/'+detail.Folder+'/'+detail.gambar" alt="Placeholder image" class="img-fluid">
             <p class="ketGambar">{{detail.ket_gambar}}</p>
             <p v-html="detail.isi_berita" ref="isiBerita" style="position:relative;"></p>
-
+            <img :src="url.iklan+'/090420.jpeg'" class="img-responsive">
         </div>
         <berita :take="5" :skip="0" :type="'berita'" :infinite="true" />
     </div>
@@ -43,6 +46,7 @@
                 url: {
                     api: urlBase.urlAxios,
                     image: urlBase.urlGambar + '/resources/Artikel_Thumbnail/',
+                    iklan: urlBase.iklan
                 },
                 hIsiBerita: null
             }
