@@ -27,7 +27,7 @@
     "dependencies": {
         "element-ui": "^2.13.0",
         "modal-fullscreen-vue": "^0.1.4",
-        "moment": "^2.24.0",
+        "moment": "^2.29.4",
         "v-video-embed": "^1.0.5",
         "videojs-youtube": "^2.6.1",
         "vue-carousel": "^0.18.0",
